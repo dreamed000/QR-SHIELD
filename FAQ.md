@@ -270,7 +270,7 @@ class execution:
     url = "https://platform.url"
     image_xpath = '//your/xpath'
     change_identifier = '//post-login/element'
-    
+
     @staticmethod
     def run(global_options, visible_browser):
         # Implementation

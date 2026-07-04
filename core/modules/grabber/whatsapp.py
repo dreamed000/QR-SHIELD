@@ -67,7 +67,10 @@ class execution:
     img_reload_btn_alt2 = (
         '//button[contains(@aria-label,"Reload") or contains(@aria-label,"reload")]'
     )
-    img_reload_btn_alt3 = '//span[contains(@data-icon,"refresh") or contains(@data-icon,"reload")]/ancestor::button[1]'
+    img_reload_btn_alt3 = (
+        '//span[contains(@data-icon,"refresh") or contains(@data-icon,"reload")]'
+        "/ancestor::button[1]"
+    )
 
     # =========================================================================
     # SESSION / LOGIN SUCCESS DETECTION XPATHS

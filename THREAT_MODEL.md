@@ -174,21 +174,21 @@ graph TD
     B -->|QR Intercept| C[Capture QR Code]
     B -->|Session Steal| D[Steal Session Token]
     B -->|Phishing| E[Deceive User]
-    
+
     C --> F[Scan/Decode QR]
     D --> F
     E --> F
-    
+
     F --> G[Obtain Session]
-    
+
     G --> H[Impersonate User]
-    
+
     H --> I{Post-Exploitation}
     I -->|Read| J[Access Messages]
     I -->|Write| K[Send Messages]
     I -->|Extract| L[Steal Data]
     I -->|Move Lateral| M[Access Other Systems]
-    
+
     J --> N[Impact: Privacy Breach]
     K --> O[Impact: Reputation Damage]
     L --> P[Impact: Data Theft]

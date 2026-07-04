@@ -114,11 +114,11 @@ class info:
 class execution:
     module_type = types.grabber  # or types.post
     name = "module_name"
-    
+
     # Platform-specific selectors
     image_xpath = '//xpath/to/qr'
     change_identifier = '//xpath/to/login/success'
-    
+
     @staticmethod
     def run(global_options, visible_browser):
         # Module implementation

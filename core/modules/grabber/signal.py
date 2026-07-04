@@ -44,7 +44,10 @@ class execution:
     )
 
     # --- Alt 3: any canvas not inside header/footer (broadest fallback) -----
-    image_xpath_alt3 = "//canvas[not(ancestor::header) and not(ancestor::footer) and not(ancestor::nav)]"
+    image_xpath_alt3 = (
+        "//canvas[not(ancestor::header) and not(ancestor::footer) "
+        "and not(ancestor::nav)]"
+    )
 
     # --- Alt 4: canvas with aria-label mentioning QR ------------------------
     image_xpath_alt4 = (
@@ -60,7 +63,10 @@ class execution:
     img_reload_button = (
         '//button[contains(@data-testid,"refresh") or contains(@data-testid,"reload")]'
     )
-    img_reload_btn_alt = '//button[contains(normalize-space(.),"Refresh") or contains(normalize-space(.),"Reload")]'
+    img_reload_btn_alt = (
+        '//button[contains(normalize-space(.),"Refresh") '
+        'or contains(normalize-space(.),"Reload")]'
+    )
     img_reload_btn_alt2 = (
         '//button[contains(@aria-label,"Refresh") or contains(@aria-label,"refresh")]'
     )
@@ -79,7 +85,8 @@ class execution:
 
     # Primary: success confirmation heading / banner
     change_identifier = (
-        '//*[contains(normalize-space(.),"linked") or contains(normalize-space(.),"Linked") '
+        '//*[contains(normalize-space(.),"linked") '
+        'or contains(normalize-space(.),"Linked") '
         'or contains(normalize-space(.),"Device added")]'
     )
 
@@ -92,7 +99,10 @@ class execution:
     change_id_ios = '//div[@role="list" and contains(@aria-label,"Chats")]'
 
     # Alt 3: any element confirming device registration complete
-    change_id_alt = '//*[contains(@class,"success") or contains(@class,"linked") or contains(@data-testid,"success")]'
+    change_id_alt = (
+        '//*[contains(@class,"success") or contains(@class,"linked") '
+        'or contains(@data-testid,"success")]'
+    )
 
     # =========================================================================
     # SELECTOR MAINTENANCE NOTES

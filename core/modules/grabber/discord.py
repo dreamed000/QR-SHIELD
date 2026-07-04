@@ -31,7 +31,10 @@ class execution:
 
     # --- Primary: img inside the QR code container div ----------------------
     # Discord wraps the QR image in a div with class containing "qrCode"
-    image_xpath = '//img[contains(@src,"data:image/png") and ancestor::div[contains(@class,"qrCode")]]'
+    image_xpath = (
+        '//img[contains(@src,"data:image/png") and '
+        'ancestor::div[contains(@class,"qrCode")]]'
+    )
 
     # --- Alt 1: any img whose src is a data-URI inside the auth wrapper -----
     image_xpath_alt1 = (
@@ -39,10 +42,16 @@ class execution:
     )
 
     # --- Alt 2: img with alt or aria-label suggesting QR --------------------
-    image_xpath_alt2 = '//img[contains(@alt,"QR") or contains(@alt,"qr") or contains(@aria-label,"QR")]'
+    image_xpath_alt2 = (
+        '//img[contains(@alt,"QR") or contains(@alt,"qr") '
+        'or contains(@aria-label,"QR")]'
+    )
 
     # --- Alt 3: broadest catch – any data-URI img not inside a header -------
-    image_xpath_alt3 = '//img[starts-with(@src,"data:image") and not(ancestor::header) and not(ancestor::nav)]'
+    image_xpath_alt3 = (
+        '//img[starts-with(@src,"data:image") and not(ancestor::header) '
+        "and not(ancestor::nav)]"
+    )
 
     # --- Alt 4: SVG-based QR (Discord has tested SVG-rendered codes in beta) -
     image_xpath_alt4 = (
@@ -60,7 +69,10 @@ class execution:
     img_reload_button = (
         '//button[contains(@class,"refreshQr") or contains(@class,"refresh")]'
     )
-    img_reload_btn_alt = '//button[contains(normalize-space(.),"Refresh") or contains(normalize-space(.),"refresh")]'
+    img_reload_btn_alt = (
+        '//button[contains(normalize-space(.),"Refresh") '
+        'or contains(normalize-space(.),"refresh")]'
+    )
     img_reload_btn_alt2 = (
         '//button[contains(@aria-label,"Refresh") or contains(@aria-label,"refresh")]'
     )
@@ -83,7 +95,10 @@ class execution:
     )
 
     # Alt 1: user info panel at bottom-left (shows username + discriminator)
-    change_id_android = '//section[contains(@aria-label,"User Controls") or contains(@aria-label,"user controls")]'
+    change_id_android = (
+        '//section[contains(@aria-label,"User Controls") '
+        'or contains(@aria-label,"user controls")]'
+    )
 
     # Alt 2: the Home button (direct messages) that appears post-login
     change_id_ios = '//a[@aria-label="Direct Messages" or @aria-label="Home"]'

@@ -422,7 +422,8 @@ class QRShieldCLI:
             module_context.Exec(self.all_keywords)
         else:
             ui.error(
-                "Failed to enter module context: module execution handler not available."
+                "Failed to enter module context: module execution handler "
+                "not available."
             )
 
     def command_sessions(self, text=""):

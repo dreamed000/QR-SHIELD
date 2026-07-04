@@ -217,7 +217,8 @@ class misc:
 
     @staticmethod
     def base64_to_image(base64_data):
-        # Becomes useful if the targeted website is loading the image from a base64 string
+        # Becomes useful if the targeted website is loading the image from
+        # a base64 string.
         return a2b_base64(base64_data.replace("data:image/png;base64,", ""))
 
     @staticmethod
@@ -295,7 +296,8 @@ def resolve_post_session(global_options, module_name=None, session_type=None):
                 )
             if session_type and actual_type != session_type.lower():
                 raise ValueError(
-                    f"Session {session_id} type mismatch: expected '{session_type}', got '{actual_type}'."
+                    f"Session {session_id} type mismatch: expected '{session_type}', "
+                    f"got '{actual_type}'."
                 )
             return session_id
         raise ValueError(f"Session {session_id} not found in sessions file.")
@@ -305,13 +307,15 @@ def resolve_post_session(global_options, module_name=None, session_type=None):
         return candidates[0][0]
     if not candidates:
         raise ValueError(
-            "No matching sessions found. Use 'sessions -l' to list available captured sessions."
+            "No matching sessions found. Use 'sessions -l' to list "
+            "available captured sessions."
         )
     candidate_list = ", ".join(
         [f"{sid} ({data.get('name')})" for sid, data in candidates]
     )
     raise ValueError(
-        f"Multiple matching sessions found: {candidate_list}. Set session_id to one of these IDs."
+        "Multiple matching sessions found: "
+        f"{candidate_list}. Set session_id to one of these IDs."
     )
 
 
@@ -345,7 +349,8 @@ class types:
             "host": [1, "The local host to listen on.", "127.0.0.1"],
             "useragent": [
                 1,
-                "Make useragent is the (default) one, a (random) generated useragent or a specifed useragent",
+                "Make useragent is the (default) one, a (random) generated "
+                "useragent or a specified useragent",
                 "(default)",
             ],
         }

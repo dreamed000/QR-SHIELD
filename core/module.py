@@ -31,7 +31,7 @@ Module commands
     run                   Launch the current module.
     use     <module>      Use an available module.
     info    <module>      Get information about an available module.
-    search  <text>        Search for a module by a specific text in its name or in its description.
+    search  <text>        Search for a module by a text in its name or description.
     previous              Sets the previously loaded module as the current module.
     back                  Move back from the current context.
 """ + end
@@ -228,7 +228,8 @@ class ModuleContext:
             if not Settings.headless_browser:
                 if browser is None:
                     error(
-                        "Browser support is unavailable (missing optional dependencies)."
+                        "Browser support is unavailable "
+                        "(missing optional dependencies)."
                     )
                     return
                 Settings.headless_browser = browser.headless_browsers()
@@ -247,9 +248,14 @@ class ModuleContext:
 
         status_map = {
             "Duplicate": "Module already running!",
-            "NoBrowser": "Firefox not found. Please install Firefox to use this module.",
+            "NoBrowser": (
+                "Firefox not found. Please install Firefox to use this module."
+            ),
             "Failed": "Failed to open Firefox. Check your installation.",
-            "Invalid useragent": "Invalid useragent option. Use (default), (random), or a custom string.",
+            "Invalid useragent": (
+                "Invalid useragent option. Use (default), (random), "
+                "or a custom string."
+            ),
         }
         current_status = current_browser.get("Status")
         if current_status in status_map:

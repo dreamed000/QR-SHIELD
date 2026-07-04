@@ -83,7 +83,10 @@ class execution:
     )
 
     # --- Alt 4: broadest canvas fallback ------------------------------------
-    image_xpath_alt4 = "//canvas[not(ancestor::header) and not(ancestor::footer) and not(ancestor::nav)]"
+    image_xpath_alt4 = (
+        "//canvas[not(ancestor::header) and not(ancestor::footer) "
+        "and not(ancestor::nav)]"
+    )
 
     # =========================================================================
     # QR RELOAD / REFRESH BUTTON XPATHS
@@ -92,9 +95,13 @@ class execution:
     # The overlay has a button/div to re-generate the token.
     # =========================================================================
 
-    img_reload_button = '//button[contains(@class,"btn-primary") and contains(normalize-space(.),"Scan")]'
+    img_reload_button = (
+        '//button[contains(@class,"btn-primary") '
+        'and contains(normalize-space(.),"Scan")]'
+    )
     img_reload_btn_alt = (
-        '//button[contains(normalize-space(.),"Refresh") or contains(normalize-space(.),"refresh") '
+        '//button[contains(normalize-space(.),"Refresh") '
+        'or contains(normalize-space(.),"refresh") '
         'or contains(normalize-space(.),"Reload")]'
     )
     img_reload_btn_alt2 = (
@@ -117,7 +124,10 @@ class execution:
     change_identifier = '//div[contains(@class,"chatlist") or @id="chatlist"]'
 
     # Alt 1: compose / new message button in sidebar
-    change_id_android = '//button[contains(@class,"btn-menu-item") and contains(normalize-space(.),"New")]'
+    change_id_android = (
+        '//button[contains(@class,"btn-menu-item") '
+        'and contains(normalize-space(.),"New")]'
+    )
 
     # Alt 2: search input inside the chat list panel
     change_id_ios = (

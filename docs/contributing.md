@@ -157,11 +157,11 @@ class execution:
     url = "https://platform.url/login"
     image_xpath = '//xpath/to/qr/image'
     change_identifier = '//xpath/post-login/element'
-    
+
     options = {
         # Optional: module-specific options
     }
-    
+
     @staticmethod
     def run(global_options, visible_browser):
         # 1. Navigate to login page
@@ -188,7 +188,7 @@ class info:
 class execution:
     module_type = types.post
     name = "platform"
-    
+
     options = {
         'session_id': {
             'Description': 'Session ID to load',
@@ -196,7 +196,7 @@ class execution:
             'Value': ''
         }
     }
-    
+
     @staticmethod
     def run(global_options, visible_browser):
         session_id = execution.options['session_id']['Value']
@@ -260,13 +260,13 @@ Aim for:
 ```python
 def extract_qr_code(element):
     """Extract QR code image from DOM element.
-    
+
     Args:
         element: Selenium element containing QR code
-        
+
     Returns:
         PIL Image object or None if not found
-        
+
     Raises:
         Exception: If image extraction fails
     """
@@ -279,16 +279,16 @@ Use Google-style docstrings:
 ```python
 def function(arg1, arg2):
     """Brief description.
-    
+
     Longer description if needed.
-    
+
     Args:
         arg1: Description of arg1
         arg2: Description of arg2
-        
+
     Returns:
         Description of return value
-        
+
     Raises:
         ValueError: When validation fails
     """

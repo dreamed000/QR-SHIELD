@@ -4,7 +4,7 @@
 | |  | |  _  /______\___ \|  __  | | | |  __| | |    | |  | |
 | |__| | | \ \      ____) | |  | |_| |_| |____| |____| |__| |
  \___\_\_|  \_\    |_____/|_|  |_|_____|______|______|_____/
-                                                                 
+
 {Name}
 {Description}
 	{Loaded}
@@ -32,22 +32,22 @@ $$$$$AnyShIt$$$$$$
 
 $$$$$AnyShIt$$$$$$
 ░▄▀▄░█▀▄░░░░░█▀▀░█░█░▀█▀░█▀▀░█░░░█▀▄
-░█\█░█▀▄░▄▄▄░▀▀█░█▀█░░█░░█▀▀░█░░░█░█      
-░░▀\░▀░▀░░░░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀░        
-        [ stay sharp. stay shielded ] 
+░█\█░█▀▄░▄▄▄░▀▀█░█▀█░░█░░█▀▀░█░░░█░█
+░░▀\░▀░▀░░░░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀░
+        [ stay sharp. stay shielded ]
 {Name}
 {Description}
-	{Loaded}        
+	{Loaded}
 
 $$$$$AnyShIt$$$$$$
 ┏━┓┏━┓   ┏━┓╻ ╻╻┏━╸╻  ╺┳┓
-┃┓┃┣┳┛╺━╸┗━┓┣━┫┃┣╸ ┃   ┃┃     
-┗┻┛╹┗╸   ┗━┛╹ ╹╹┗━╸┗━╸╺┻┛     
-guarding every scan, byte  
+┃┓┃┣┳┛╺━╸┗━┓┣━┫┃┣╸ ┃   ┃┃
+┗┻┛╹┗╸   ┗━┛╹ ╹╹┗━╸┗━╸╺┻┛
+guarding every scan, byte
 {Name}
 {Description}
-	{Loaded} 
-  
+	{Loaded}
+
 $$$$$AnyShIt$$$$$$
  _   _   _   _   _   _   _   _   _
 / \ / \ / \ / \ / \ / \ / \ / \ / \
@@ -59,8 +59,8 @@ $$$$$AnyShIt$$$$$$
 
 $$$$$AnyShIt$$$$$$
 +-+-+-+-+-+-+-+-+-+
-|Q|R|-|S|H|I|E|L|D|     
-+-+-+-+-+-+-+-+-+-+       
+|Q|R|-|S|H|I|E|L|D|
++-+-+-+-+-+-+-+-+-+
 {Name}
 {Description}
 	{Loaded}
@@ -68,9 +68,9 @@ $$$$$AnyShIt$$$$$$
 $$$$$AnyShIt$$$$$$
  QQQ  RRRR         SSSS H   H III EEEEE L     DDDD
 Q   Q R   R       S     H   H  I  E     L     D   D
-Q Q Q RRRR   ---   SSS  HHHHH  I  EEEE  L     D   D    
-Q  QQ R  R            S H   H  I  E     L     D   D      
- QQQQ R   R       SSSS  H   H III EEEEE LLLLL DDDD         
+Q Q Q RRRR   ---   SSS  HHHHH  I  EEEE  L     D   D
+Q  QQ R  R            S H   H  I  E     L     D   D
+ QQQQ R   R       SSSS  H   H III EEEEE LLLLL DDDD
 {Name}
 {Description}
 	{Loaded}
@@ -78,18 +78,18 @@ Q  QQ R  R            S H   H  I  E     L     D   D
 $$$$$AnyShIt$$$$$$
  ▄▄▄▄  ▄▄▄▄▄          ▄▄▄▄  ▄    ▄ ▄▄▄▄▄  ▄▄▄▄▄▄ ▄      ▄▄▄▄
 ▄▀  ▀▄ █   ▀█        █▀   ▀ █    █   █    █      █      █   ▀▄
-█    █ █▄▄▄▄▀        ▀█▄▄▄  █▄▄▄▄█   █    █▄▄▄▄▄ █      █    █    
-█    █ █   ▀▄  ▀▀▀       ▀█ █    █   █    █      █      █    █      
- █▄▄█▀ █    ▀        ▀▄▄▄█▀ █    █ ▄▄█▄▄  █▄▄▄▄▄ █▄▄▄▄▄ █▄▄▄▀   
+█    █ █▄▄▄▄▀        ▀█▄▄▄  █▄▄▄▄█   █    █▄▄▄▄▄ █      █    █
+█    █ █   ▀▄  ▀▀▀       ▀█ █    █   █    █      █      █    █
+ █▄▄█▀ █    ▀        ▀▄▄▄█▀ █    █ ▄▄█▄▄  █▄▄▄▄▄ █▄▄▄▄▄ █▄▄▄▀
 {Name}
 {Description}
 	{Loaded}
 
 $$$$$AnyShIt$$$$$$
 ▞▀▖▛▀▖   ▞▀▖▌ ▌▜▘▛▀▘▌  ▛▀▖
-▌ ▌▙▄▘▄▄▖▚▄ ▙▄▌▐ ▙▄ ▌  ▌ ▌      
-▌▚▘▌▚    ▖ ▌▌ ▌▐ ▌  ▌  ▌ ▌        
-▝▘▘▘ ▘   ▝▀ ▘ ▘▀▘▀▀▘▀▀▘▀▀          
+▌ ▌▙▄▘▄▄▖▚▄ ▙▄▌▐ ▙▄ ▌  ▌ ▌
+▌▚▘▌▚    ▖ ▌▌ ▌▐ ▌  ▌  ▌ ▌
+▝▘▘▘ ▘   ▝▀ ▘ ▘▀▘▀▀▘▀▀▘▀▀
 {Name}
 {Description}
 	{Loaded}

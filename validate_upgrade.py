@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Comprehensive validation test for QR-Shield dependency upgrade."""
 
-import sys
 import subprocess
+import sys
 
 print("=" * 70)
 print("QR-SHIELD DEPENDENCY UPGRADE VALIDATION")
@@ -133,9 +133,8 @@ except Exception as e:
 
 # Test 3e: urllib3 and requests
 try:
-    import urllib3
     import requests
-
+    import urllib3
     assert hasattr(urllib3, "PoolManager"), "urllib3.PoolManager not found"
     assert hasattr(requests, "get"), "requests.get not found"
     print(f"  ✅ urllib3 and requests API {' ' * 26} OK")

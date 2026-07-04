@@ -7,7 +7,7 @@ import random
 import shutil
 from typing import Any, Callable, Iterable, cast
 
-from .color import B, Bold, C, G, M, R, end
+from .color import Bold, C, G, M, R, end
 
 # Ensure `readline` exists as a module object on all platforms. When the
 # real readline isn't available (Windows without pyreadline), create a
@@ -211,22 +211,22 @@ class MyCompleter(object):
                     self.matches = [
                         m for m in self.options if "/" in m and m.startswith(text)
                     ]
-                    if (
-                        len(self.matches) == 0
-                    ):  # This returns modules that have any word of the current written ones
+                    # This returns modules that have any word of the current
+                    # written ones
+                    if len(self.matches) == 0:
                         self.matches = [
                             m for m in self.options if "/" in m and text in m
                         ]
 
-                elif (
-                    line.startswith("set") and "set" in self.options
-                ):  # This returns options for set command but only when it's available :D
+                elif line.startswith("set") and "set" in self.options:
+                    # This returns options for set command but only when
+                    # it's available :D
                     self.matches = [
                         m for m in self.module_options if m.startswith(text)
                     ]
-                    if (
-                        len(self.matches) == 0
-                    ):  # This returns all options if no thing is written after the set command
+                    if len(self.matches) == 0:
+                        # This returns all options if no thing is written after
+                        # the set command
                         self.matches = self.module_options
                 else:
                     self.matches = [
@@ -251,9 +251,9 @@ class MyCompleter(object):
                         self.matches = sorted(wanted)
             else:
                 line = readline.get_line_buffer()
-                if line.startswith(
-                    "use "
-                ):  # This works if there's no word typed but use command was typed before
+                if line.startswith("use "):
+                    # This works if there's no word typed but use command was
+                    # typed before
                     self.matches = [m for m in self.options if "/" in m]
                 elif line.startswith("set") and "set" in self.options:
                     self.matches = self.module_options

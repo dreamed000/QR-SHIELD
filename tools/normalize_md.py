@@ -55,7 +55,8 @@ def normalize_md(path: Path):
             i += 1
             continue
 
-        # Ensure blank lines around list items and normalize ordered list numbering to '1.'
+        # Ensure blank lines around list items and normalize ordered list numbering
+        # to '1.'
         stripped_line = line.lstrip()
         if stripped_line.startswith(("-", "*")) or (
             stripped_line and stripped_line.split()[0].rstrip(".").isdigit()

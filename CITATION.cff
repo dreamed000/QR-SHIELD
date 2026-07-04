@@ -2,9 +2,9 @@ cff-version: 1.2.0
 type: software
 title: "QR-SHIELD: An educational and cybersecurity research framework for QR Code Threat Analysis"
 abstract: >
-  QR-SHIELD is a research-grade Python framework designed for security 
-  research into QR code threats. The project enables security researchers, detection 
-  engineers, and defensive security professionals to understand QR code attack vectors, 
+  QR-SHIELD is a research-grade Python framework designed for security
+  research into QR code threats. The project enables security researchers, detection
+  engineers, and defensive security professionals to understand QR code attack vectors,
   develop detection mechanisms, and build awareness around emerging threats in the QR ecosystem.
 authors:
   - family-names: Chaudhary

@@ -168,12 +168,12 @@ class execution:
     name = "platform_name"
     url = "https://platform.url"
     session_type = "localstorage"  # or "profile"
-    
+
     # XPath definitions with cascading fallbacks
     image_xpath = '//your/xpath/here'
     image_xpath_alt1 = '//fallback/1'
     # ... additional fallbacks
-    
+
     change_identifier = '//post-login/detector'
 ```
 
@@ -248,13 +248,13 @@ def process_session(session_id: str) -> bool:
 def capture_session(module_name: str) -> dict:
     """
     Capture a session using the specified module.
-    
+
     Args:
         module_name: Name of the grabber module to use.
-        
+
     Returns:
         Dictionary containing session data or error information.
-        
+
     Raises:
         ValueError: If module_name is empty or invalid.
     """
@@ -290,12 +290,12 @@ class TestFeature(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures."""
         pass
-    
+
     def test_core_functionality(self):
         """Test primary feature behavior."""
         result = module.function()
         self.assertTrue(result)
-    
+
     def test_error_handling(self):
         """Test error conditions."""
         with self.assertRaises(ValueError):

