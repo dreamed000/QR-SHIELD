@@ -22,7 +22,7 @@ imports_test = {
     "requests": "requests HTTP library",
     "PIL.Image": "Pillow Image processing",
     "jinja2": "Jinja2 template engine",
-    "user_agent": "user_agent library"
+    "user_agent": "user_agent library",
 }
 
 failed_imports = []
@@ -59,16 +59,18 @@ for package, (expected, spec) in expected_versions.items():
         result = subprocess.check_output(
             [sys.executable, "-m", "pip", "show", package],
             text=True,
-            stderr=subprocess.DEVNULL
+            stderr=subprocess.DEVNULL,
         )
-        version_line = [l for l in result.split('\n') if l.startswith('Version:')][0]
-        actual_version = version_line.split(': ')[1]
-        
+        version_line = [
+            line for line in result.split("\n") if line.startswith("Version:")
+        ][0]
+        actual_version = version_line.split(": ")[1]
+
         if package == "user-agent":
             package_display = "user-agent"
         else:
             package_display = package
-            
+
         print(f"  {package_display:<15} {actual_version:<15} ✅ OK")
     except Exception as e:
         print(f"  {package:<15} ERROR: {e}")
@@ -87,8 +89,9 @@ print("-" * 70)
 # Test 3a: Selenium Options (modern API)
 try:
     from selenium.webdriver.firefox.options import Options
+
     options = Options()
-    options.headless = True
+    setattr(options, "headless", True)
     options.add_argument("--no-sandbox")
     print(f"  ✅ Selenium Options API {' ' * 25} OK")
 except Exception as e:
@@ -98,6 +101,7 @@ except Exception as e:
 # Test 3b: Jinja2 Environment
 try:
     from jinja2 import Environment
+
     env = Environment()
     print(f"  ✅ Jinja2 Environment API {' ' * 24} OK")
 except Exception as e:
@@ -107,9 +111,10 @@ except Exception as e:
 # Test 3c: PIL Image
 try:
     from PIL import Image
+
     # Test that Image module has required methods
-    assert hasattr(Image, 'open'), "Image.open not found"
-    assert hasattr(Image, 'new'), "Image.new not found"
+    assert hasattr(Image, "open"), "Image.open not found"
+    assert hasattr(Image, "new"), "Image.new not found"
     print(f"  ✅ PIL Image API {' ' * 35} OK")
 except Exception as e:
     print(f"  ❌ PIL Image API {' ' * 35} FAILED: {e}")
@@ -118,6 +123,7 @@ except Exception as e:
 # Test 3d: user_agent generation
 try:
     from user_agent import generate_user_agent
+
     ua = generate_user_agent()
     assert isinstance(ua, str) and len(ua) > 0, "Invalid user agent generated"
     print(f"  ✅ user_agent generation {' ' * 28} OK")
@@ -129,8 +135,9 @@ except Exception as e:
 try:
     import urllib3
     import requests
-    assert hasattr(urllib3, 'PoolManager'), "urllib3.PoolManager not found"
-    assert hasattr(requests, 'get'), "requests.get not found"
+
+    assert hasattr(urllib3, "PoolManager"), "urllib3.PoolManager not found"
+    assert hasattr(requests, "get"), "requests.get not found"
     print(f"  ✅ urllib3 and requests API {' ' * 26} OK")
 except Exception as e:
     print(f"  ❌ urllib3 and requests API {' ' * 26} FAILED: {e}")
