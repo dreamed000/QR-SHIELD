@@ -40,7 +40,7 @@ jobs:
           echo "Files checked: $(find docs -name '*.md' | wc -l)" >> docs-report.md
 
       - name: Upload documentation artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: documentation-build
