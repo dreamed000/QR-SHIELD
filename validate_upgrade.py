@@ -135,6 +135,7 @@ except Exception as e:
 try:
     import requests
     import urllib3
+
     assert hasattr(urllib3, "PoolManager"), "urllib3.PoolManager not found"
     assert hasattr(requests, "get"), "requests.get not found"
     print(f"  ✅ urllib3 and requests API {' ' * 26} OK")
