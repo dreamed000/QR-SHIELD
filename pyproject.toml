@@ -21,7 +21,7 @@ qrshield = "qrshield:main"
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0.0,<8.0.0",
+    "pytest>=7.0.0,<10.0.0",
     "pytest-cov>=4.0.0,<5.0.0",
     "ruff>=0.0.262,<1.0.0",
     "black>=26.5.1,<27.0.0",
