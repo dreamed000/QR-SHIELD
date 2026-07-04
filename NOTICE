@@ -1,0 +1,10 @@
+﻿# Notice
+
+QR-SHIELD is distributed under a professional Dual Licensing Model.
+
+- The **Community Research License** grants research and defensive use rights for authorized academic research, education, security research, authorized penetration testing, CTF, internal security assessments, and learning.
+- The **Commercial License** is required for commercial integration, SaaS deployment, consulting, managed security services, OEM licensing, enterprise deployment, redistribution for profit, or any use that supports revenue-generating operations.
+
+This repository is source-available under a research-oriented Community Research License. It is not released under MIT, Apache, GPL, BSD, or any standard OSI license.
+
+See [LICENSE](LICENSE) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md) for full licensing terms and commercial licensing inquiries.

@@ -1,0 +1,95 @@
+QR SHIELD COMMUNITY RESEARCH LICENSE
+
+Version 1.0
+
+Copyright (c) 2026 Puneet Chandra Chaudhary (DOC70R)
+
+This Community Research License is a limited, non-commercial license for QR SHIELD and the associated source code, documentation, templates, and assets.
+
+1. Definitions
+
+1.1. "Author" means Puneet Chandra Chaudhary (DOC70R).
+1.2. "Software" means QR SHIELD and all associated source code, documentation, templates, media, and assets.
+1.3. "Licensee" means the individual or organization granted rights under this License.
+1.4. "Community Research Use" means academic research, education, cybersecurity research, defensive security, security awareness, authorized penetration testing, Capture The Flag (CTF) activities, internal security assessments, personal learning, and internal modification.
+1.5. "Commercial Use" means any use for commercial gain, revenue generation, SaaS deployment, consulting, managed security services, redistribution for profit, OEM integration, enterprise deployment, or embedding in proprietary software.
+1.6. "Attribution" means preserving the copyright notice, author name, and license terms in all copies and derivative works.
+1.7. "Distribution" means providing the Software to any third party by any means, including copy, transfer, or network access.
+
+2. Grant of Rights
+
+2.1. The Author grants Licensee a worldwide, non-exclusive, non-transferable, revocable license to use the Software solely for Community Research Use.
+2.2. Licensee may copy, modify, and internally use the Software for Community Research Use only.
+2.3. Licensee may create derivative works for Community Research Use, subject to the terms of this License.
+
+3. Restrictions
+
+3.1. Commercial Use is expressly prohibited under this License.
+3.2. Sale, resale, rental, lease, sublicense, or any form of commercial redistribution of the Software is prohibited.
+3.3. SaaS deployment, managed service delivery, or any networked service providing the Software to others is prohibited without a separate Commercial License.
+3.4. Consulting, advisory services, or professional services that rely on this Software are prohibited without a separate Commercial License.
+3.5. Embedding the Software into commercial, closed-source, or proprietary products is prohibited without a separate Commercial License.
+3.6. Rebranding, removing attribution, or obscuring the Author’s identity is prohibited.
+3.7. Licensee may not use the Software for illegal, unethical, or unauthorized security testing.
+
+4. Acceptable Use
+
+4.1. Acceptable uses include:
+  a. Academic research and publication.
+  b. Classroom instruction and study.
+  c. Defensive security research.
+  d. Authorized penetration testing.
+  e. Security awareness and education.
+  f. Capture The Flag (CTF) challenges.
+  g. Internal security assessments.
+  h. Personal learning and skill development.
+4.2. All acceptable uses must maintain Attribution.
+
+5. Prohibited Activities
+
+5.1. Unauthorized credential collection, deceptive social engineering, fraud, malware deployment, or other illegal activity.
+5.2. Commercial redistribution, SaaS hosting, consulting services, or paid support services.
+5.3. Embedding in products offered for sale.
+5.4. Removing, altering, or obscuring attribution or copyright notices.
+5.5. Using the Software to harm individuals, organizations, or infrastructure.
+
+6. Warranty Disclaimer
+
+6.1. The Software is provided "AS IS" without warranty of any kind.
+6.2. The Author expressly disclaims all warranties, including merchantability, fitness for a particular purpose, title, and non-infringement.
+6.3. The Licensee assumes all risk arising from use of the Software.
+
+7. Limitation of Liability
+
+7.1. In no event shall the Author be liable for any direct, indirect, incidental, special, consequential, or punitive damages.
+7.2. This limitation applies even if the Author has been advised of the possibility of such damages.
+
+8. Termination
+
+8.1. This License is effective until terminated.
+8.2. The Author may terminate this License immediately if the Licensee breaches any term.
+8.3. Upon termination, the Licensee must cease use and destroy or return all copies of the Software.
+
+9. Governing Law
+
+9.1. This License is governed by the laws of the jurisdiction of the Author.
+9.2. Any dispute arising under this License shall be resolved in the courts or arbitration forum of the Author's jurisdiction.
+
+10. Ethical Use Statement
+
+10.1. This Software is intended solely for ethical security research and defensive analysis.
+10.2. Licensee must act responsibly and in accordance with applicable laws and professional ethics.
+
+11. Security Research Purpose
+
+11.1. This License is granted for security research, defensive security engineering, and authorized learning.
+11.2. Licensee may not use the Software for unauthorized or unlawful purposes.
+
+12. Attribution
+
+12.1. All copies and derivative works must include the copyright notice, author attribution, and license text.
+
+13. Acceptance
+
+13.1. By using the Software, the Licensee agrees to all terms of this License.
+13.2. If the Licensee does not agree to these terms, they must not use the Software.

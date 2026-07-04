@@ -1,0 +1,92 @@
+cff-version: 1.2.0
+type: software
+title: "QR-SHIELD: An educational and cybersecurity research framework for QR Code Threat Analysis"
+abstract: >
+  QR-SHIELD is a research-grade Python framework designed for security 
+  research into QR code threats. The project enables security researchers, detection 
+  engineers, and defensive security professionals to understand QR code attack vectors, 
+  develop detection mechanisms, and build awareness around emerging threats in the QR ecosystem.
+authors:
+  - family-names: Chaudhary
+    given-names: Puneet Chandra
+    email: dreamdrafted000@gmail.com
+    orcid: "https://orcid.org/0009-0005-7220-2327"
+    alias: "D0C70R"
+identifiers:
+  - type: url
+    value: "https://github.com/dreamed000/QR-SHIELD"
+  - type: other
+    value: "github:dreamed000/QR-SHIELD"
+repository-code: "https://github.com/dreamed000/QR-SHIELD"
+url: "https://github.com/dreamed000/QR-SHIELD"
+repository: "https://github.com/dreamed000/QR-SHIELD"
+license:
+  - "LicenseRef-Community-Research-License"
+version: "1.0.0"
+date-released: 2026-07-03
+keywords:
+  - "security research"
+  - "cybersecurity"
+  - "QR code"
+  - "offensive security"
+  - "defensive security"
+  - "threat analysis"
+  - "threat detection"
+  - "session hijacking"
+  - "phishing"
+  - "browser automation"
+  - "Selenium"
+topics:
+  - Security
+  - Cybersecurity
+  - QR Code Analysis
+  - Offensive Security
+  - Defensive Security
+  - Threat Research
+  - Detection Engineering
+contact:
+  - type: email
+    value: "dreamdrafted000@gmail.com"
+references:
+  - type: software
+    title: "Selenium"
+    authors:
+      - name: "Selenium Project"
+    url: "https://www.selenium.dev/"
+    version: ">=4.20"
+    license: "Apache-2.0"
+  - type: software
+    title: "Jinja2"
+    authors:
+      - name: "Pallets"
+    url: "https://jinja.palletsprojects.com/"
+    license: "BSD-3-Clause"
+  - type: software
+    title: "Pillow"
+    authors:
+      - name: "Python Imaging Library Contributors"
+    url: "https://python-pillow.org/"
+    license: "HPND"
+  - type: software
+    title: "requests"
+    authors:
+      - name: "Kenneth Reitz"
+    url: "https://requests.readthedocs.io/"
+    license: "Apache-2.0"
+  - type: software
+    title: "urllib3"
+    authors:
+      - name: "Shawn Waldon"
+    url: "https://urllib3.readthedocs.io/"
+    license: "MIT"
+funding:
+  - type: "github"
+    url: "https://github.com/sponsors/dreamed000"
+  - type: "buy-me-a-coffee"
+    url: "https://www.buymeacoffee.com"
+  - type: "patreon"
+    url: "https://www.patreon.com"
+  - type: "ko-fi"
+    url: "https://ko-fi.com"
+  - type: "paypal"
+    url: "https://www.paypal.com"

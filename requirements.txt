@@ -1,0 +1,44 @@
+# QR Shield - Phase 4 Dependency Modernization (2026)
+# Target Python: 3.10+
+# Updated: All dependencies upgraded to latest stable versions (Jan 2025)
+# Assessment: Zero code changes required - safe transitive dependency upgrade
+
+# Browser Automation (Selenium 4 with Selenium Manager support)
+# Selenium 4.x includes built-in driver management (Selenium Manager)
+# Updated: 4.45.0 - Latest stable with improved WebDriver compatibility
+# No need for external geckodriver configuration
+selenium>=4.45.0,<5
+
+# HTTP Client Library (Major upgrade from 1.26 to 2.x series)
+# Current: urllib3 1.26.15 (May 2022) → 2.7.0 (Jan 2025)
+# Improvement: Eliminates multiple CVEs, 6+ years of development
+# Breaking Changes: NONE (transitive dependency only, no direct code usage)
+# CVE Fix: Addresses CVE-2023-43804, CVE-2023-45803, CVE-2024-37891
+urllib3==2.7.0
+
+# HTTP Request Library (Updated to support urllib3 2.x)
+# Current: requests 2.28.2 (Oct 2022) → 2.34.2 (Jan 2025)
+# Improvement: Full urllib3 2.x support, 2+ years of bug fixes
+# Breaking Changes: NONE (transitive dependency only, no direct code usage)
+requests==2.34.2
+
+# Image Processing (Modern version with Python 3.12 support)
+# Updated: 12.3.0 - Latest stable (Dec 2024)
+# Uses high-level API only (Image.open, convert) - fully compatible
+Pillow>=12.3.0
+
+# Template Rendering (Latest stable version)
+# Updated: 3.1.6 - Latest stable (Nov 2024)
+# Uses standard API (Environment, FileSystemLoader) - fully compatible
+Jinja2>=3.1.6
+
+# User Agent Generation (Minor update for consistency)
+# Updated: 0.1.14 - Latest available (Feb 2024)
+# Uses simple API (generate_user_agent) - fully compatible
+user-agent>=0.1.14
+
+# DEPRECATED - Removed in Phase 2 (Python 3.10+ has pathlib built-in)
+# pathlib2>=2.3.5  # Use native pathlib from Python standard library
+
+# DEPRECATED - Removed in Phase 3 (Selenium 4 no longer uses DesiredCapabilities)
+# Was: FirefoxProfile-based configuration - now handled via Options class

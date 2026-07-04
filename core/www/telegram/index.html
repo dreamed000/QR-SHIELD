@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>whatsapp</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 20px;
+}
+h1 {
+  color: #333;
+  margin: 20px 0;
+}
+#qrcodew {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  padding: 10px;
+  background-color: white;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.step-text {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<script>
+var myTimer; myTimer = window.setInterval(reloadD,3000);
+function reloadD(){ d = new Date(); document.getElementById('qrcodew').src="tmp.png?h="+d.getTime();}
+</script>
+<h1><b>QR-SHIELD: whatsapp</b></h1>
+<div class="step-text">
+Now you have a local webserver hosting your QR Shield payload. Follow the steps below:
+</div>
+<div class="step-text">
+<strong>1.</strong> This is your always updated telegram QR Code
+<br>
+<img id="qrcodew" alt="Scan me!" src="tmp.png">
+</div>
+<div class="step-text">
+<strong>2.</strong> Edit the phishing page template to add your page source code, style, resources, etc. (located in core/templates/phishing_page.html)
+</div>
+<div class="step-text">
+<strong>3.</strong> Point your target to <a href='http://localhost:8085/'>http://localhost:8085/</a> and convince them to scan the QR code.
+</div>
+</body>
+</html>

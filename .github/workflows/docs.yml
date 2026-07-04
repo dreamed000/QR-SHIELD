@@ -1,0 +1,47 @@
+name: Build Documentation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-docs:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Validate Markdown
+        run: |
+          pip install mdl
+          find . -name "*.md" -type f ! -path "./venv/*" -exec mdl {} +
+        continue-on-error: true
+
+      - name: Check links in documentation
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          config-file: 'docs/link-check-config.json'
+        continue-on-error: true
+
+      - name: Generate documentation report
+        run: |
+          echo "# Documentation Build Report" > docs-report.md
+          echo "Generated at: $(date)" >> docs-report.md
+          echo "Files checked: $(find docs -name '*.md' | wc -l)" >> docs-report.md
+
+      - name: Upload documentation artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: documentation-build
+          path: docs-report.md
